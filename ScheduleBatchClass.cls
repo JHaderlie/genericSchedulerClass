@@ -36,7 +36,7 @@ global with sharing class ScheduleBatchClass implements Schedulable  {
     private Object createInstance(String clz) {
         Type typ;
         if (clz.contains('.')){
-            string[] splitclz = clz.split('.');
+            string[] splitclz = clz.split('\\.');
             typ = Type.forName(splitclz[0],splitclz[1]);
         } else {
             typ = Type.forName(clz);
